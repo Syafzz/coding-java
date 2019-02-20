@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h2>JavaScript Prompt</h2>
+<button onclick="myFunction()">Click This Button!</button>
+<p id="demo"></p>
+
+<script>
+	function myFunction() {
+		var txt;
+		var person = prompt("Please enter your name:", "Write your name here");
+
+		if (person == null || person == "") {txt = "User cancelled the prompt.";}
+		else {txt = "Hello "+ person +" ! <br> How are you today?";}
+		document.getElementById("demo").innerHTML = txt;
+	}
+</script>
+</body>
+</html>

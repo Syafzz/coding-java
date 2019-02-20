@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head><title>JavaScript is ..</title>
+<script>
+function myFunction() {
+	document.getElementById("demo3").innerHTML="Paragraph changed";
+}
+</script>
+</head>
+<body>
+
+<h2>What Can Javasript Do?</h2>
+
+<h3>Show Hidden HTML Elements</h3>
+<p>Javasript can show hidden HTML elements</p>
+<p id="demo" style="display:none">Hello JavaScript!</p>
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+
+<h3>Change HTML Content</h3>
+<p id="test">Javascript can change HTML content.</p>
+<button type="button" onclick="document.getElementById('test').innerHTML='Hello JavaScript!'">Click Me!</button>
+
+<p id="test2">Javascript can change HTML content like this.</p>
+<button type="button" onclick="document.getElementById('test2').innerHTML='Hello JavaScript!'">Click Me!</button>
+
+<h3>Change HTML element Style</h3>
+<p id="san">Javascript can change the style of an HTML element</p>
+<button type="button" onclick="document.getElementById('san').style.fontSize='35px'">Click Me!</button>
+
+<h3>Hide HTML Element</h3>
+<p id="san2">JavaScript can hide HTML elements</p>
+<button type="button" onclick="document.getElementById('san2').style.display='none'">Click Me!</button>
+
+<h2>JavaScript in Head</h2>
+<p id="demo3">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+</body>
+</html>

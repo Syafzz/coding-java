@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Headings and Paragraphs</title>
+</head>
+<body>
+
+<h1 id="myH"></h1>
+<p id="myP"></p>
+
+<script>
+	/*
+	The code below will change the heading with id="myH"
+	and the paragraph with id="myP" in my web page:
+	*/
+	document.getElementById("myH").innerHTML="My First Page";
+	document.getElementById("myP").innerHTML="My First Paragraph.";
+</script>
+
+<p><strong>Note:</strong>The comment block is not executed.</p>
+
+<p id="demo"></p>
+<script>
+	var a = 5;		// Declare x, give it the value of 5
+	var b = a + 2;  // Declare y, give it the value of x + 2
+
+	 document.getElementById("demo").innerHTML = b;  // Write y to demo
+</script>
+
+<p><strong>Note:</strong>The comment block is not executed.</p>
+
+<h2>JavaScript Variables</h2>
+<p>In this example, x, y, and z are variables.</p>
+<p id="demo1"></p>
+
+<script>
+	var x = 5;
+	var y = 6;
+	var z = x + y;
+	document.getElementById("demo1").innerHTML = "The value of z is: "+ z;
+</script>
+
+<h2>JavaScript Variables</h2>
+<p id="demo2"></p>
+
+<script>
+	var price1 = 5;
+	var price2 = 6;
+	var total = price1 + price2;
+	document.getElementById("demo2").innerHTML = "The total is: "+ total;
+</script>
+
+<h2>JavaScript Variables</h2>
+<p>Strings are written with quotes.</p>
+<p>Numbers are written without quotes.</p>
+<p id="demo3"></p>
+
+<script>
+	var pi = 3.14;
+	var person = "John Doe";
+	var answer = "Yes I am!";
+	document.getElementById("demo3").innerHTML = pi+"<br>"+person+"<br>"+answer;
+</script>
+
+<h2>JavaScript Variables</h2>
+<p>Create a variable, assign a value to it, and display it:</p>
+
+<p id="demo4"></p>
+<script>
+	var carName = "Volvo";
+	document.getElementById("demo4").innerHTML = carName;
+</script>
+
+
+
+</body>
+</html>
