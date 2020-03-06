@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Submit</title>
+	<script type="text/javascript">
+		function displayOutput() {
+			var input = document.getElementById("userInput").value;
+			if (input.length === 0) {
+				alert("Please enter a valid input"); 
+				return;
+			}
+			document.getElementById("result").innerHTML = "<p>You have entered: <br> "
+			+ "<p> <br>" + input;
+		}
+	</script>
+</head>
+<body>
+
+<h3 id="result">JavaScript Example</h3>
+	<!--form name="iuserInput"-->
+<input type="text" id="userInput" autofocusplaceholder="Enter some text here ..." />
+<input type="submit" value="Submit" onclick="displayOutput()" />
+	<!--/form-->
+</body>
+</html>

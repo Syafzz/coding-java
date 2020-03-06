@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p>
+
+<form id="myForm()" action="">
+	First name: <input type="text" name="Uname" id="firstN"><br><br>
+	Last name: <input type="text" name="Uname" id="lastN"><br><br>
+	<input type="button" id="show" onclick="message()" value="submit form">
+</form>
+<hr><br><label>Your input: </label><br><br>
+<p><span id="display"></span></p>
+
+<script>
+	function message() {
+		var fname = document.getElementById("firstN").value;
+		var lname = document.getElementById("lastN").value;
+		var user = "My name is <u><b>" + fname + "</b>, " + lname + "</u> &nbsp; &nbsp; :) ";
+		document.getElementById("display").innerHTML = user;
+	}
+</script>
+</body>
+</html>

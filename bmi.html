@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BMI calculator</title>
+    <style media="screen">
+      body{
+        font-family: arial , sans-serif;
+      }
+      .header{
+        background-color: black;
+        height: 100px;
+      }
+      .header p{
+        color: white;
+      }
+      .header h1{
+        color: white;
+      }
+      button{
+        border: solid 1px black;
+        border-radius: 10px;
+        background-color: white;
+        height: 30px;
+        width: 90px;
+      }
+      button:hover{
+        background-color: lightblue;
+      }
+      input{
+        text-align: center;
+        border: solid 1px black;
+        border-radius: 10px;
+        background-color: white;
+        height: 20px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body><center>
+    <div class="header">
+      <h1>Calculate your BMI</h1>
+      <p>Body Measurement Index (BMI) is essential for us since it tells us whether we are eating enough foods or not.
+      So what are you waiting for? Calculate your BMI today using the form below! :) </p>
+      <br>
+    </div>
+
+    <form name="bmi"><br>
+      Your weight:<br>
+      <input type="text" name="berat"><br>
+      Your height:<br>
+      <input type="text" name="tinggi"><br><br>
+      <button type="button" name="button" onclick="myFunction()">Get Your BMI</button>
+      <br>
+      <p id="answer"></p>
+      <p id="comment"></p>
+    </form>
+
+    <script type="text/javascript">
+      function myFunction(){
+        var berat = document.bmi.berat.value;
+        var tinggi = document.bmi.tinggi.value;
+        var total = berat/(tinggi/100*tinggi/100);
+        if (total < 18.5) {
+            document.getElementById("comment").innerHTML = "You should eat more."
+        }else if (total < 25) {
+            document.getElementById("comment").innerHTML = "Your BMI is inside the ideal BMI range."
+        }else if(total > 25) {
+            document.getElementById("comment").innerHTML = "You should be on a diet."
+        }
+
+        document.getElementById("answer").innerHTML = "Your BMI is " + total;
+      }
+    </script>
+    <div class="footer">
+      <p>(c) Copyright Firdaus Bin Safari</p>
+    </div>
+  </center></body>
+</html>

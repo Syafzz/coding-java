@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+<button id="btn">Try it</button>
+
+<p><strong>Note:</strong> The addEventListener() method is not supported in Internet Explorer 8 and earlier versions.</p>
+<p id="demo"></p>
+
+<script>
+	document.getElementById("btn").addEventListener("click", function(){
+
+		document.getElementById("demo").innerHTML="HelloW Worldss ~~!";
+	})
+</script>
+
+<h1 id="demo1">Mouse Over</h1>
+<p>This example uses the HTML DOM to assign an "onmouseover" and "onmouseout" event to h1 element.</p>
+<script>
+	document.getElementById("demo1").onmouseover = function() {mouseOver()};
+	document.getElementById("demo1").onmouseout = function() {mouseOut()};
+
+	function mouseOver() {
+		document.getElementById("demo1").style.color="red";
+	}
+	function mouseOut() {
+		document.getElementById("demo1").style.color="blue";
+	}
+</script>
+
+<p>This example uses the HTML DOM to assign an "ondoubleclick" event to a p element.</p>
+<p id="demo2">double-click me.</p>
+
+<script>
+	document.getElementById("demo2").ondoubleclick = function() {myFunction()};
+
+	function myFunction(){
+		document.getElementById("demo2").innerHTML="I was double-clicked! XD";
+	}
+</script>
+
+
+<h3>Images Mouse Over</h3>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="nonon/profPic.jpg" alt="Cuutee~" width="282" height="282">
+<p>The function bigImg() is triggered when the user mouse over the image. This function enlarges the image.</p>
+<p>The function normalImg() is triggered when the mouse pointer moved out of the image. The function sets
+the height and width of the image back to normal.</p>
+
+<script>
+	function bigImg(x) {
+		x.style.height = "564px";
+		x.style.width = "564px";
+	}
+
+	function normalImg(x) {
+		x.style.height="282px";
+		x.style.width="282px";
+	}
+</script>
+
+<h3>On Double-Click</h3>
+<p>This example uses the HTML DOM to assign an "ondblclick" event to a p element.</p>
+<p><center><table id="demo3">
+	<tr><th>Double-click Me.</th></tr>
+</table></p>
+
+<script>
+	document.getElementById("demo3").ondblclick=function() {nonFunction()};
+
+	function nonFunction() {
+		document.getElementById("demo3").innerHTML= "I was double-clicked!";
+	}
+</script>
+</center>
+
+
+<h2>On Key Down</h2>
+<form>
+	Write a message:<br>
+	<input type="text" onkeydown="color('yellow')" onkeyup="color('white')" name="myInput">
+</form>
+<script>
+	function color(color) {
+		document.forms[0].myInput.style.background = color;
+	}
+</script>
+
+<h2>Onmousedown OnmouseUp</h2>
+<h3><p id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()">
+Click the text! the mouseDown() function is triggered when the mouse button is pressed down over this paragraph. The function sets the color of the text to red. The mouseUp() function is triggered when the mouse 
+button is released. The mouseUp() function sets the color of text to green.
+</p></h3>
+
+<script>
+	function mouseDown() {
+		document.getElementById("p1").style.color= "red";
+	}
+
+	function mouseUp() {
+		document.getElementById("p1").style.color= "green";
+	}
+</script>
+
+<h2>Onfocus OnBlur</h2>
+<p>This example uses the HTML DOM to assign an "onfocus" and"onBlur" event to an input element.</p>
+Enter your name: <input type="text" id="fname">
+
+<script>
+	document.getElementById("fname").onfocus= function() {secFunction()};
+	function secFunction() {
+		document.getElementById("fname").style.backgroundColor= "yellow";
+	}
+
+	document.getElementById("fname").onblur= function() {threeFunction()};
+	function threeFunction() {
+		alert("Input field lost focus.");
+		document.getElementById("fname").style.backgroundColor= "powderblue";
+	}
+</script>
+
+<h2>Selected Text</h2>
+<p>Some text: <input type="text" value="Hellow Worldds!" onselect="myFunction()"></p>
+<p id="demo4"></p>
+
+<script>
+	function myFunction() {
+		document.getElementById("demo4").innerHTML= "You selected some text..";
+	}
+</script>
+
+
+<center>
+<h2>TEXT Trigger</h2>
+<p>Write something in the text field to trigger a function.</p>
+<textarea id="secInput" oninput="forthFunction()" rows="5" placeholder="Tulis.. lah"></textarea>
+	<hr><hr>
+<p id="demo5"></p>
+
+<script>
+	function forthFunction() {
+		var a= document.getElementById("secInput").value;
+		document.getElementById("demo5").innerHTML= "<u>You wrote:</u><br>"+ a;
+	}
+</script>
+</center>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

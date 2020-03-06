@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table>
+	<tr>
+		Enter name: <input type="text" name="nm" />
+	</tr>
+	<tr>
+		Enter age: <input type="text" name="ag" />
+	</tr>
+	<tr>
+		<input type="button" value="display" onclick="collect(this.form)" />
+	</tr>
+</table>
+
+<br><br><br><br><br><br><br>
+<hr><br><br>
+
+<div id="results">
+	<script type="text/javascript">
+		function collect(frm) {
+			document.getElementById("results").innerHTML += "Name: <b>" + frm.nm.value +
+			"</b><br>Age: <b>" + frm.ag.value + "<br><br><hr>"
+			frm.reset();
+		}
+	</script>
+</div>
+</body>
+</html>

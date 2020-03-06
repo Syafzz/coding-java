@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script language="JavaScript">
+		function showInput() {
+			document.getElementById("display").innerHTML = document.getElementById("user_input").value;
+		}
+	</script>
+</head>
+<body>
+<center><form>
+	<br><label><b>Enter a Message</b></label><br><br>
+	<textarea name="message" id="user_input"></textarea>
+</form><br><br><br>
+<input type="submit" onclick="showInput();"><br><br><br>
+<hr><br><label>Your input: </label><br><br>
+<p><span id="display"></span></p>
+</center>
+</body>
+</html>

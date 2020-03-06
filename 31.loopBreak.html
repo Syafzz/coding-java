@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loop with a Break</title>
+</head>
+<body>
+
+<h2>A loop with a Break</h2>
+<p id="demo"></p>
+
+<script>
+	var text ="";
+	var i;
+	for (i = 0; i < 10; i++) {
+		if (i === 4) {break; }
+		text += "The number is " + i + "<br>";
+	}
+	document.getElementById("demo").innerHTML = text;
+</script>
+
+<p>A loop which will skip the step where i = 3</p>
+<p id="demo2"></p>
+
+<script>
+	var text1 = "";
+	var a;
+	for (a = 0; a < 10; a++) {
+		if (a === 3) {continue; }
+		text1 += "The number is " + a + "<br>";
+	}
+	document.getElementById("demo2").innerHTML = text1;
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+	var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+	var i, len, text;
+	for (i = 0; len = cars.length, text=""; i++) {
+		text += cars[i] + "<br>";
+	}
+	document.getElementById("demo").innerHTML = text;
+</script>
+
+<p id="demo2"></p>
+<script>
+	var cars = ["BMW", "Volvo", "Saab", "Ford"];
+	var i = 0;
+	var len = cars.length;
+	var text = "";
+	for (; i < len;) {
+		text += cars[i] + "<br>";
+		i++;
+	}
+	document.getElementById("demo2").innerHTML = text;
+</script>
+
+<h2>JavaScript Loops</h2>
+<p>The for/i statement loops through the properties of an object.</p>
+
+<p id="demo3"></p>
+<script>
+	var txt = "";
+	var person = {fname: "John", lname: "Doe", age: 25};
+	var x;
+	for (x in person) {
+		txt += person[x] + " ";
+	}
+	document.getElementById("demo3").innerHTML = txt;
+</script>
+
+
+</body>
+</html>

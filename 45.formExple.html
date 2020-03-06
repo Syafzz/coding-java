@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Example</title>
+	<script>
+		function display() {
+			DispWin = window.open('', 'NewWin', 'toolbar=yes, status=yes, width=700,height=500');
+			var items =document.getElementsByName('langz');
+			var selectItems = "";
+			for (var i = 0; i < items.length; i++){
+				if (items[i].type == 'checkbox' && items[i].checked == true)
+					selectItems += " - " + items[i].value;
+			}
+			message = "<b>THANK YOU!</b><br>Here are your details:- <pre>";
+			message += "<u><li>First Name: <br>" + document.answer.firstName.value + "</b>";
+			message += "<li>Last Name: <b>" + document.answer.lastName.value + "</b>";
+			message += "<li>E-mail: <b>" + document.answer.email.value + "</b>";
+			message += "<li>Gender: <b>" + document.answer.gen.value + "</b>";
+			message += "<li>Address: <b>" + document.answer.addr.value + "</b>";
+			message += "<li>Nationality: <b>" + document.answer.nation.value + "</b>";
+			message += "<li>Birthday: <b>" + document.answer.bday.value + "</b>";
+			message += "<li>Contact No. : <b>" + document.answer.telno.value + "</b>";
+
+			message += "<li>Language: " + (selectItems) + "</u>" + "<br>" + '<br><input type="button" value="print" onclick="window.print()" />';
+			DispWin.document.write(message);
+		}
+	</script>
+</head>
+<body>
+<div id="header"><h2><u>Contact Us!</u></h2></div>
+
+<div id="wrapper">
+	<form name="answer" action="" method="post" id="answers" autofocus>
+		<b>First Name: </b><input type="text" name="firstName" id="fname" placeholder="first name..">
+		<br><br>
+		<b>Last Name: </b><input type="text" name="lastName" placeholder="last name..">
+		<br><br>
+		<b>E-mail: </b><input type="email" name="email" placeholder="e-mail address..">
+		<br><br>
+
+		<b>Gender: </b><br>
+			<input type="radio" name="gen" value="Male">Male
+			<input type="radio" name="gen" value="Female">Female
+		<br><br>
+
+		<b>Address: </b><br>
+		<textarea name="addr" rows="3" placeholder="Your home address.."></textarea>
+		<br><br>
+
+		<b>Nationality: </b><br>
+		<select name="nation" id="nations">
+			<option value="default" placeholder="Choose Citizenship" checked>
+			Choose Citizenship</option>
+			<option value="Citizen">CITIZEN</option>
+			<option value="Permanent Resident">PERMANENT RESIDENT</option>
+			<option value="Non_Citizen">Non-Citizen</option>
+		</select>
+		<br><br>
+
+		<b>Birthday: </b><br><input type="date" name="bday" format="dd-mm-yyyy">
+		<br><br>
+
+		<b>Telephone No: </b><br><input type="password" name="telno" id="telno" maxlength="10"><br>
+		<div id="inputx" name="choices" class="choice">
+			<br><b>Language: </b><br>
+			<input class="choice" type="checkbox" name="langz" value="B.MELAYU">B.Melayu
+			<input class="choice" type="checkbox" name="langz" value="ENGLISH">B.Inggeris
+			<input class="choice" type="checkbox" name="langz" value="MANDARIN">Mandarin
+			<input class="choice" type="checkbox" name="langz" value="ARABIC">Arabic
+			<input class="choice" type="checkbox" name="langz" value="TAMIL">Tamil
+		</div>
+		<br><p>
+			<input type="submit" id="submit" value="Submit" onclick="display()">
+		</p>
+	</form>
+</div>
+
+
+
+</body>
+</html>

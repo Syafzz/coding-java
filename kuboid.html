@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript">
+	function myFunction(){
+        var panjang = document.kira.panjang.value;
+        var tinggi = document.kira.tinggi.value;
+        var lebar = document.kira.lebar.value;
+        var total = panjang*tinggi*lebar;
+
+        document.getElementById("jawapan").innerHTML = "Isipadu kuboid ini = " + total;
+      }
+</script>
+</head>
+<body>
+
+	<form name="kira"><br>
+      Panjang:<br>
+      <input type="text" name="panjang"><br>
+      Tinggi:<br>
+      <input type="text" name="tinggi"><br>
+      Lebar:<br>
+      <input type="text" name="lebar"><br><br>
+      <button type="button" name="button" onclick="myFunction()">Apakah jumlah isipadu?</button>
+      <br>
+      <p id="jawapan"></p>
+    </form>
+
+</body>
+</html>

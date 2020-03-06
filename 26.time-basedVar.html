@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time-based Greeting</title>
+</head>
+<body>
+
+<p>Click the button to display a time-based greeting:</p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<script>
+	function myFunction() {
+		var hour = new Date().getHours();
+		var greeting;
+		if (hour < 18) {
+			greeting = "Good day!";
+		} else {
+			greeting = "Good evening!";
+		}
+
+		document.getElementById("demo").innerHTML = greeting;
+	}
+</script>
+
+<p>Click the button to get a time-based greeting:</p>
+<button onclick="myFunction1()">Try it</button>
+
+<p id="demo1"></p>
+<script>
+	function myFunction1() {
+		var greeting1;
+		var time = new Date().getHours();
+		if(time < 10){
+			greeting1 = "Good morning!";
+		} else if (time < 12) {
+			greeting1 = "Good day!";
+		} else {
+			greeting1 = "Good evening!";
+		}
+		document.getElementById("demo1").innerHTML = greeting1;
+	}
+</script>
+
+<h2>What day is Today?</h2>
+<p id="demo2"></p>
+<script>
+	var day;
+	switch (new Date().getDay()) {
+		case 0: day = "Sunday";
+		break;
+		case 1: day = "Monday";
+		break;
+		case 2: day = "Tuesday";
+		break;
+		case 3: day = "Wednesday";
+		break;
+		case 4: day = "Thursday";
+		break;
+		case 5: day = "Friday";
+		break;
+		case 6: day = "Saturday";
+	}
+	document.getElementById("demo2").innerHTML = "Today is " + day;
+</script>
+
+<p id="demo3"></p>
+<script>
+	var text;
+	switch (new Date().getDay()) {
+		case 4:
+		case 5: text = "Soon it is Weekend";
+		break;
+		case 0:
+		case 6: text = "It is Weekend";
+		break;
+		default: text = "Looking forward to the Weekend";
+	}
+	document.getElementById("demo3").innerHTML = text;
+</script>
+
+
+</body>
+</html>

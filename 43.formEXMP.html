@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>This example uses the HTML DOM to assign an "onsubmit" event to a form element.</p>
+<p>When you submit the form, a function is triggered which alerts some text.</p>
+
+<form id="myForm" action="#" name="myForm">
+	<p>Enter name : <input type="text" id="fname" name="fname"></p>
+
+	<p id="gend" name="gend">Gender :</b><br>
+			<input type="radio" id="gend" name="gend" value="MALE">Male
+			<input type="radio" id="gend" name="gend" value="FEMALE">Female<br>
+
+	<p>Birthday : <input type="date" id="dates" name="dates"></p>
+
+	<p>Occupation : 
+		<select option id="day" name="day">
+			<option> Select an Option!</option>
+			<option> STUDENT</option>
+			<option> BUSINESS</option>
+			<option> ADMINISTRATION</option>
+			<option> EDUCATOR</option>
+			<option> UNEMPLOYED</option>
+		</select>
+		
+	<p>Address : <textarea id="addr" name="addr"></textarea></p>
+	<input type="submit" value="Submit">
+</form>
+
+<script>
+	document.getElementById("myForm").onsubmit = function() {myFunction()};
+	function myFunction() {
+		alert("The form was submitted");
+
+		var inform = document.getElementById("myForm").elements[0].value + 
+		"<br>" + document.myForm.gend.value + 
+		"<br>" + document.getElementById("myForm").elements[3].value + 
+		"<br>" + document.getElementById("myForm").elements[4].value + 
+		"<br>" + document.getElementById("myForm").elements[5].value + 
+		"<br> Thank You";
+
+		myWindow = window.open("", "myWindow", "width=300,height=200");
+		myWindow.document.write(inform);
+	}
+</script>
+</body>
+</html>

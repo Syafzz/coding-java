@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script language="JavaScript">
+		function showInput() {
+			document.getElementById("display").innerHTML = document.getElementById("user_input").value;
+		}
+	</script>
+</head>
+<body>
+
+<form>
+	<label><b>Enter a Message</b></label>
+	<input type="text" name="message" id="user_input">
+</form>
+	<br>
+<input type="submit" onclick="showInput();"><br/>
+	<hr><hr>
+<br/><label>Your input: </label><br/>
+<p><span id="display"></span></p>
+
+</body>
+</html>

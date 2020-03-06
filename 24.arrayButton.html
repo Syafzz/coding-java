@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h3><div id="carsDiv"></div></h3><br>
+	<p><button id="addCarBtn">Add Car</button></p>
+</center>
+
+<script>
+	var current = 0;
+	var cars = new Array(5);
+	cars[0] = "Audi";
+	cars[1] = "Bentley";
+	cars[2] = "Mercedes";
+	cars[3] = "Mini";
+	cars[4] = "BMW";
+	cars[5] = "-End of List-";
+
+	document.getElementById("addCarBtn").onclick = function() {
+		if(!(current > cars.length -  1)) {
+			document.getElementById("carsDiv").innerHTML+= cars[current] + "<br>";
+			current++;
+		}
+	}
+</script>
+
+
+
+
+
+</body>
+</html>

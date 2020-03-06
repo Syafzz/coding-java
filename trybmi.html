@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI</title>
+</head>
+<body>
+
+<h3>BMI</h3>
+
+
+
+<button onclick="myFunction()">Click This Button!</button>
+
+<p id="demo"></p>
+
+
+
+<script>
+	function myFunction() {
+	var berat = prompt("Masukkan berat anda").value
+	var tinggi = prompt("Masukkan tinggi anda").value
+	var bmi = berat/(tinggi*tinggi)
+
+	var txt = bmi
+	if (bmi<18.5){
+		document.txt.value = "Underweight";
+	}
+	else if (bmi<24){
+		document.txt.value = "normal";
+	}
+
+	else if (bmi<29){
+		document.txt.value = "Overweight";
+	}
+	else if (bmi>30){
+		document.txt.value = "Obesity";
+	}
+
+	document.getElementById("demo").innerHTML = txt
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Example</title>
+	<script language="JavaScript" type="text/javascript">
+		function display() {
+			DispWin = window.open('','NewWin', 'toolbar=no, status=no, width=500,height=300');
+			message = "<br> Your information: <br>";
+			message += "<u><li><b>NAME: </b>" + document.form1.yourname.value;
+			message += "<li><b>ADDRESS: </b>" + document.form1.address.value;
+			message += "<li><b>PHONE: </b>" + document.form1.phone.value + "</u>";
+			message += "<br><hr><br>" + '<br><input type="button" value="print" onclick="window.print()" />' + "<br>";
+
+			DispWin.document.write(message);
+		}
+	</script>
+</head>
+<body>
+<h1>Form Example</h1>
+Enter the following information. When you press the Display button, the data you entered will be displayed in a pop-up window.
+
+<form name="form1">
+	<p><b>Name: </b>&nbsp; <input type="text" size="25" name="yourname"></p>
+	<p><b>Address: </b>&nbsp; <textarea rows="3" size="30" name="address" 
+		style="vertical-align:middle" /></textarea></p>
+	<p><b>Phone: </b>&nbsp; <input type="password" size="15" name="phone"></p>
+	<p><input type="button" value="Display" onclick="display();"></p>
+</form>
+
+
+
+</body>
+</html>

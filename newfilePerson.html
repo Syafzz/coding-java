@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Person</title>
+</head>
+<body>
+<p>An object method is a function definition, stored as property value.</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<script>
+	var person = {firstName: "Tasty", lastName: "Cupcakes", id: 1234, fullName: function(){
+		return this.firstName +" "+ this.lastName;
+	}
+	};
+	document.getElementById("demo").innerHTML= person.fullName();
+	document.getElementById("demo2").innerHTML= person.fullName();
+</script>
+
+<h3>Button Time</h3>
+
+<p id="demo3"></p>
+<button onclick="document.getElementById('demo3').innerHTML=Date()">The time is ?</button>
+
+<p id="demo4"></p>
+<button onclick="this.innerHTML=Date()">The time is ?</button>
+
+<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">The time is ?</button>
+
+<p id="demo5"></p>
+<script>
+	function displayDate() {
+		document.getElementById("demo5").innerHTML=Date();
+	}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

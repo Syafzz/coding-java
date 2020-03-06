@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h2>JavaScript While</h2>
+<p id="demo"></p>
+
+<script>
+	var text = "";
+	var i = 0;
+	while (i < 11){
+		text += "<br>The number is " + i;
+		i++;
+	}
+	document.getElementById("demo").innerHTML = text;
+</script>
+
+<p id="demo2"></p>
+<script>
+	var cars = ["1BMW", "2Volvo", "3Saab", "4Ford"];
+	var l = 0;
+	var text1= "";
+	while (cars[l]) {
+		text += cars[l] + "<br>";
+		l++;
+	}
+	document.getElementById("demo2").innerHTML = text1;
+</script>
+
+<hr>
+<!--p id="demo3"></p>
+<script>
+	var cars = ["1BMW", "2Volvo", "3Saab", "4Ford"];
+	var l = 0;
+	var text1= "";
+	while (cars[l]) {
+		text += cars[l] + "<br>";
+		l++;
+	}
+	document.getElementById("demo3").innerHTML = text1;
+</script-->
+
+
+
+</body>
+</html>

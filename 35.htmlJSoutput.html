@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML JavaScript output on same page</title>
+	<script type="text/javascript">
+		function showMessage() {
+			var play = document.getElementById("message").value;
+			display_message.innerHTML = play;
+		}
+	</script>
+</head>
+<body>
+<form>
+	<center>
+		Enter message: <br>
+		<textarea id="message" cols="30" rows="5" placeholder="write here ..."></textarea><br><br>
+		<input type="button" onclick="showMessage()" value="submit" />
+</form><br><hr><br>
+<p>Message is: <br>
+	<b><span id="display_message"></span></b></p>
+	</center>
+</body>
+</html>

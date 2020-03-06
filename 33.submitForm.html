@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>Enter names in the fields, then click "Submit" to submit the form:</p>
+
+<form id="frm1" action="">
+	First name: <input type="text" name="fname"><br><br>
+	Last name: <input type="text " name="lname"><br><br>
+	<input type="button" onclick="myFunction()" value="Submit">
+</form>
+
+<script>
+	function myFunction() {
+		text = document.getElementById("frm1").elements[0].value
+		+ "," + document.getElementById("frm1").elements[1].value;
+
+		document.getElementById("frm1").submit();
+		document.write(text);
+	}
+</script>
+
+</body>
+</html>
