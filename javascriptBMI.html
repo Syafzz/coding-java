@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mari kira BMI</title>
+	<style type="text/css">
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		th, td {
+			padding: 15px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+<h1>KIRA BMI</h1>
+<form name="bmiForm">
+Berat (kg): <input type="text" name="weight" size="10"><br /><br>
+Tinggi (m): <input type="text" name="height" size="10"><br /><br>
+<input type="button" value="HANTAR" onClick="calculateBmi()">
+<input type="reset" value="RESET" /><br>
+</form>
+<br>
+<table>
+	<tr>
+		<th>Berat</th>
+		<th>Tinggi</th>
+		<th>BMI</th>
+		<th>Keputusan</th>
+	</tr>
+
+	<tr>
+		<td id="w"> - </td>
+		<td id="h"> - </td>
+		<td id="hasil"> - </td>
+		<td id="output"> - </td>
+	</tr>
+</table>
+
+<script language="JavaScript">
+<!--
+function calculateBmi() {
+var weight = document.bmiForm.weight.value;
+var height = document.bmiForm.height.value;
+if(weight > 0 && height > 0){	
+var finalBmi = weight / (height * height);
+
+document.getElementById("w").innerHTML = weight+"kg";
+document.getElementById("h").innerHTML = height+"m";
+
+if(finalBmi < 18.5){
+document.getElementById("hasil").innerHTML= finalBmi;
+document.getElementById("output").innerHTML= "KURUS";
+document.getElementById("output").style.cssText = "color: white; background-color: red; font-family: Arial; font-weight: bold;";
+}
+if(finalBmi > 18.5 && finalBmi < 24.9){
+document.getElementById("hasil").innerHTML= finalBmi;
+document.getElementById("output").innerHTML= "NORMAL";
+document.getElementById("output").style.cssText = "background-color: #66ff33; font-family: Arial; font-weight: bold;";
+}
+if(finalBmi > 25 && finalBmi < 29.9){
+document.getElementById("hasil").innerHTML= finalBmi;
+document.getElementById("output").innerHTML= "GEMUK";
+document.getElementById("output").style.cssText = "background-color: orange; font-family: Arial; font-weight: bold;";
+}
+if(finalBmi >= 30){
+document.getElementById("hasil").innerHTML= finalBmi;
+document.getElementById("output").innerHTML= "OBESITI";
+document.getElementById("output").style.cssText = "color: white; background-color: red; font-family: Arial; font-weight: bold;";
+}
+}
+else{
+alert("Sila masukkan nilai yang betul.");
+}
+}
+//-->
+</script>
+
+</body>
+</html>
+
